@@ -3,6 +3,8 @@
 
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o
  /Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/Pass.cpp
+ /usr/local/opt/llvm/include/llvm-c/Target.h
+ /usr/local/opt/llvm/include/llvm-c/TargetMachine.h
  /usr/local/opt/llvm/include/llvm-c/Types.h
  /usr/local/opt/llvm/include/llvm/ADT/APFloat.h
  /usr/local/opt/llvm/include/llvm/ADT/APInt.h
@@ -16,6 +18,7 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o
  /usr/local/opt/llvm/include/llvm/ADT/Optional.h
  /usr/local/opt/llvm/include/llvm/ADT/PointerIntPair.h
  /usr/local/opt/llvm/include/llvm/ADT/PointerUnion.h
+ /usr/local/opt/llvm/include/llvm/ADT/STLExtras.h
  /usr/local/opt/llvm/include/llvm/ADT/SmallPtrSet.h
  /usr/local/opt/llvm/include/llvm/ADT/SmallVector.h
  /usr/local/opt/llvm/include/llvm/ADT/StringMap.h
@@ -25,23 +28,35 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o
  /usr/local/opt/llvm/include/llvm/ADT/ilist_node.h
  /usr/local/opt/llvm/include/llvm/ADT/iterator.h
  /usr/local/opt/llvm/include/llvm/ADT/iterator_range.h
+ /usr/local/opt/llvm/include/llvm/Config/AsmParsers.def
+ /usr/local/opt/llvm/include/llvm/Config/AsmPrinters.def
+ /usr/local/opt/llvm/include/llvm/Config/Disassemblers.def
+ /usr/local/opt/llvm/include/llvm/Config/Targets.def
  /usr/local/opt/llvm/include/llvm/Config/llvm-config.h
  /usr/local/opt/llvm/include/llvm/IR/Argument.h
  /usr/local/opt/llvm/include/llvm/IR/Attributes.h
  /usr/local/opt/llvm/include/llvm/IR/Attributes.inc
  /usr/local/opt/llvm/include/llvm/IR/BasicBlock.h
  /usr/local/opt/llvm/include/llvm/IR/CallingConv.h
+ /usr/local/opt/llvm/include/llvm/IR/Comdat.h
  /usr/local/opt/llvm/include/llvm/IR/Constant.h
+ /usr/local/opt/llvm/include/llvm/IR/Constants.h
+ /usr/local/opt/llvm/include/llvm/IR/DataLayout.h
  /usr/local/opt/llvm/include/llvm/IR/DebugLoc.h
  /usr/local/opt/llvm/include/llvm/IR/DerivedTypes.h
  /usr/local/opt/llvm/include/llvm/IR/Function.h
+ /usr/local/opt/llvm/include/llvm/IR/GlobalAlias.h
  /usr/local/opt/llvm/include/llvm/IR/GlobalObject.h
  /usr/local/opt/llvm/include/llvm/IR/GlobalValue.h
+ /usr/local/opt/llvm/include/llvm/IR/GlobalVariable.h
+ /usr/local/opt/llvm/include/llvm/IR/InstrTypes.h
  /usr/local/opt/llvm/include/llvm/IR/Instruction.def
  /usr/local/opt/llvm/include/llvm/IR/Instruction.h
+ /usr/local/opt/llvm/include/llvm/IR/Instructions.h
  /usr/local/opt/llvm/include/llvm/IR/LLVMContext.h
  /usr/local/opt/llvm/include/llvm/IR/Metadata.def
  /usr/local/opt/llvm/include/llvm/IR/Metadata.h
+ /usr/local/opt/llvm/include/llvm/IR/Module.h
  /usr/local/opt/llvm/include/llvm/IR/OperandTraits.h
  /usr/local/opt/llvm/include/llvm/IR/SymbolTableListTraits.h
  /usr/local/opt/llvm/include/llvm/IR/TrackingMDRef.h
@@ -62,6 +77,7 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o
  /usr/local/opt/llvm/include/llvm/Support/Atomic.h
  /usr/local/opt/llvm/include/llvm/Support/CBindingWrapping.h
  /usr/local/opt/llvm/include/llvm/Support/Casting.h
+ /usr/local/opt/llvm/include/llvm/Support/CodeGen.h
  /usr/local/opt/llvm/include/llvm/Support/CommandLine.h
  /usr/local/opt/llvm/include/llvm/Support/Compiler.h
  /usr/local/opt/llvm/include/llvm/Support/DataTypes.h

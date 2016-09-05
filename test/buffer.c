@@ -6,21 +6,12 @@
 #include <stdatomic.h>
 #include <pthread.h>
 #include <stdlib.h>
-#include <sys/time.h>
-#include "zlog.h"
 
 int BUF_SIZE = 5;
-int rc;
-zlog_category_t *variable_values_cat;
-zlog_category_t *function_calls_cat;
 
 char* ring_buffer;
 char* _Atomic read_ptr;
 char* write_ptr;
-
-void log_variable_change(const char* variable, int value) {
-  zlog_info(variable_values_cat, "%s %d", variable, value);
-}
 
 void init_ring_buffer() {
 
@@ -38,7 +29,7 @@ char* buffer_next(char* ptr) {
 
 
 void process(char* data){
-  zlog_info(function_calls_cat, "");
+  /* Log function call*/
   struct timespec ts;
   ts.tv_sec = 0;
   ts.tv_nsec = 1000000;
@@ -55,8 +46,7 @@ void producer_main() {
     next_write_ptr = buffer_next(write_ptr);
     if (next_write_ptr != read_ptr) {
       *write_ptr = getc(stdin);
-      /* printf("Value %d written to buffer.\n", *write_ptr); */
-      log_variable_change("write_ptr", (int) next_write_ptr);
+      // Log variable change
       write_ptr = next_write_ptr;
 
       struct timespec ts;
@@ -100,13 +90,13 @@ void create_consumers(int num_consumers) {
 
   pthread_t threads[num_consumers]; //should be made static for future access
   int thread_ids[num_consumers]; //should be made static for future access
-  int rc;
+  int thread;
   for(int t = 0; t < num_consumers; t++){
     /* printf("Creating consumer %d\n", t); */
     thread_ids[t] = t;
     //rc = pthread_create(&threads[t], NULL, consumer_main, &thread_ids[t]);
-    rc = pthread_create(&threads[t], NULL, consumer_main, (void* ) t); //transfer value directly
-    if (rc){
+    thread = pthread_create(&threads[t], NULL, consumer_main, (void* ) t); //transfer value directly
+    if (thread){
       /* printf("ERROR; return code from pthread_create() is %d\n", rc); */
       pthread_exit(NULL);
     }
@@ -114,25 +104,6 @@ void create_consumers(int num_consumers) {
 }
 
 int main() {
-  rc = zlog_init("zlog.conf");
-  if (rc) {
-    printf("init failed\n");
-    return -1;
-  }
-
-  variable_values_cat = zlog_get_category("variable_values_cat");
-  if (!variable_values_cat) {
-    printf("get cat fail\n");
-    zlog_fini();
-    return -2;
-  }
-
-  function_calls_cat = zlog_get_category("function_calls_cat");
-  if (!function_calls_cat) {
-    printf("get cat fail\n");
-    zlog_fini();
-    return -2;
-  }
 
   /* printf("Initialising ring buffer.\n"); */
   init_ring_buffer();
