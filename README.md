@@ -26,6 +26,9 @@ Link it together
     clang++ instrumented_buffer.bc -o buffer -lzlog -lpthread \
     -L/usr/local/lib -L../build/InstrumentFunctions -llogger
 
+To run the programm you have to have a `zlog.conf` file in the folder.
+You can use the default conf from `InstrumentFunctions/zlog.conf.default`.
+
 Run it:
 
     ./buffer
