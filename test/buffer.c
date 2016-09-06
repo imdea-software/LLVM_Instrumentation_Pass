@@ -52,7 +52,7 @@ void producer_main() {
       struct timespec ts;
       ts.tv_sec = 0;
       ts.tv_nsec = 100000000ULL * rand() / RAND_MAX ;
-      nanosleep(&ts, NULL); // shpuld generate better traces
+      nanosleep(&ts, NULL); // should generate better traces
     }
   }
 }

@@ -8,6 +8,8 @@
 zlog_category_t *variable_values_cat;
 zlog_category_t *function_calls_cat;
 
+int initialized = 0;
+
 int init() {
     int rc = zlog_init("zlog.conf");
     if (rc) {
@@ -28,19 +30,18 @@ int init() {
         zlog_fini();
         return -2;
     }
-    zlog_info(variable_values_cat, "initialize zlog");
+    initialized = 1;
     return 0;
 }
 
-
 void log_variable_change(const char* variable, int value) {
+    initialized || init();
+
     zlog_info(variable_values_cat, "%s %d", variable, value);
 }
 
-void log_function_call(const char* function) {
-    zlog_info(function_calls_cat, "%s", function);
-}
+void log_function_call(const char* file, const char* function) {
+    initialized || init();
 
-void log_test() {
-    printf("test");
+    zlog_info(function_calls_cat, "%s:%s", file, function);
 }

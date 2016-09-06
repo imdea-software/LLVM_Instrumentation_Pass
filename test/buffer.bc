@@ -14,7 +14,6 @@ target triple = "x86_64-apple-macosx10.11.0"
 @ring_buffer = common global i8* null, align 8
 @read_ptr = common global i8* null, align 8
 @write_ptr = common global i8* null, align 8
-@.str = private unnamed_addr constant [17 x i8] c"non instrumented\00", align 1
 @__stdinp = external global %struct.__sFILE*, align 8
 
 ; Function Attrs: nounwind ssp uwtable
@@ -56,16 +55,13 @@ define void @process(i8* %data) #0 {
   %1 = alloca i8*, align 8
   %ts = alloca %struct.timespec, align 8
   store i8* %data, i8** %1, align 8
-  %2 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str, i32 0, i32 0))
-  %3 = getelementptr inbounds %struct.timespec, %struct.timespec* %ts, i32 0, i32 0
-  store i64 0, i64* %3, align 8
-  %4 = getelementptr inbounds %struct.timespec, %struct.timespec* %ts, i32 0, i32 1
-  store i64 1000000, i64* %4, align 8
-  %5 = call i32 @"\01_nanosleep"(%struct.timespec* %ts, %struct.timespec* null)
+  %2 = getelementptr inbounds %struct.timespec, %struct.timespec* %ts, i32 0, i32 0
+  store i64 0, i64* %2, align 8
+  %3 = getelementptr inbounds %struct.timespec, %struct.timespec* %ts, i32 0, i32 1
+  store i64 1000000, i64* %3, align 8
+  %4 = call i32 @"\01_nanosleep"(%struct.timespec* %ts, %struct.timespec* null)
   ret void
 }
-
-declare i32 @printf(i8*, ...) #1
 
 declare i32 @"\01_nanosleep"(%struct.timespec*, %struct.timespec*) #1
 
@@ -297,4 +293,4 @@ attributes #4 = { noreturn }
 !llvm.ident = !{!1}
 
 !0 = !{i32 1, !"PIC Level", i32 2}
-!1 = !{!"clang version 3.8.1 (tags/RELEASE_381/final)"}
+!1 = !{!"Apple LLVM version 7.3.0 (clang-703.0.31)"}

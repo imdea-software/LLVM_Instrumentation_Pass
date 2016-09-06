@@ -39,6 +39,7 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/op
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/CallingConv.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Comdat.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Constant.h
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/ConstantFolder.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Constants.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/DataLayout.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/DebugLoc.h
@@ -48,15 +49,19 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/op
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/GlobalObject.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/GlobalValue.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/GlobalVariable.h
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/IRBuilder.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/InstrTypes.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Instruction.def
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Instruction.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Instructions.h
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Intrinsics.gen
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Intrinsics.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/LLVMContext.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Metadata.def
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Metadata.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Module.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/OperandTraits.h
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Operator.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/SymbolTableListTraits.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/TrackingMDRef.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Type.h
@@ -64,6 +69,7 @@ InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/op
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/User.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Value.def
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/Value.h
+InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/IR/ValueHandle.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/InitializePasses.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/Pass.h
 InstrumentFunctions/CMakeFiles/InstrumentFunctions.dir/Pass.cpp.o: /usr/local/opt/llvm/include/llvm/PassAnalysisSupport.h

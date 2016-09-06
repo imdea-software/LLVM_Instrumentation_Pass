@@ -16,9 +16,9 @@ Instrument programm in `test/buffer.c`:
     clang -emit-llvm -S buffer.c -o buffer.bc
 
 Outputs llvm bytecode of `buffer.c`.
-Instrument it:
+Instrument it, use `-instrument functionname` for each function to instrument:
 
-    opt -load ../build/InstrumentFunctions/libInstrumentFunctions.so -instrument_function_calls buffer.bc > instrumented_buffer.bc
+    opt -load ../build/InstrumentFunctions/libInstrumentFunctions.so -instrument_function_calls buffer.bc -instrument process > instrumented_buffer.bc
 
 Generate Logger archive:
 

@@ -15,6 +15,12 @@ llvm/Pass.h
 /Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/Pass.h
 llvm/IR/Constants.h
 /Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/IR/Constants.h
+llvm/Support/CommandLine.h
+/Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/Support/CommandLine.h
+llvm/IR/IRBuilder.h
+/Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/IR/IRBuilder.h
+llvm/IR/Value.h
+/Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/IR/Value.h
 llvm/IR/Module.h
 /Users/Alex/Projekte/LLVMInstrumentFunctions/InstrumentFunctions/llvm/IR/Module.h
 llvm/IR/Function.h
@@ -416,6 +422,12 @@ llvm/Support/Compiler.h
 llvm/IR/User.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/IR/User.h
 
+/usr/local/opt/llvm/include/llvm/IR/ConstantFolder.h
+llvm/IR/Constants.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Constants.h
+llvm/IR/InstrTypes.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/InstrTypes.h
+
 /usr/local/opt/llvm/include/llvm/IR/Constants.h
 llvm/ADT/APFloat.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/ADT/APFloat.h
@@ -514,6 +526,36 @@ llvm/IR/GlobalObject.h
 llvm/IR/OperandTraits.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/IR/OperandTraits.h
 
+/usr/local/opt/llvm/include/llvm/IR/IRBuilder.h
+llvm/ADT/ArrayRef.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/ArrayRef.h
+llvm/ADT/StringRef.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/StringRef.h
+llvm/ADT/Twine.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/Twine.h
+llvm/IR/BasicBlock.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/BasicBlock.h
+llvm/IR/ConstantFolder.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/ConstantFolder.h
+llvm/IR/DataLayout.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/DataLayout.h
+llvm/IR/Function.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Function.h
+llvm/IR/GlobalVariable.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/GlobalVariable.h
+llvm/IR/Instructions.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Instructions.h
+llvm/IR/Intrinsics.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Intrinsics.h
+llvm/IR/LLVMContext.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/LLVMContext.h
+llvm/IR/Operator.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Operator.h
+llvm/IR/ValueHandle.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/ValueHandle.h
+llvm/Support/CBindingWrapping.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/Support/CBindingWrapping.h
+
 /usr/local/opt/llvm/include/llvm/IR/InstrTypes.h
 llvm/ADT/Optional.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/ADT/Optional.h
@@ -585,6 +627,16 @@ llvm/Support/ErrorHandling.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/Support/ErrorHandling.h
 iterator
 -
+
+/usr/local/opt/llvm/include/llvm/IR/Intrinsics.gen
+
+/usr/local/opt/llvm/include/llvm/IR/Intrinsics.h
+llvm/ADT/ArrayRef.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/ArrayRef.h
+string
+-
+llvm/IR/Intrinsics.gen
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Intrinsics.gen
 
 /usr/local/opt/llvm/include/llvm/IR/LLVMContext.h
 llvm/Support/CBindingWrapping.h
@@ -658,6 +710,18 @@ system_error
 llvm/IR/User.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/IR/User.h
 
+/usr/local/opt/llvm/include/llvm/IR/Operator.h
+llvm/IR/Constants.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Constants.h
+llvm/IR/DataLayout.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/DataLayout.h
+llvm/IR/DerivedTypes.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/DerivedTypes.h
+llvm/IR/Instruction.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Instruction.h
+llvm/IR/Type.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Type.h
+
 /usr/local/opt/llvm/include/llvm/IR/SymbolTableListTraits.h
 llvm/ADT/ilist.h
 /usr/local/opt/llvm/include/llvm/IR/llvm/ADT/ilist.h
@@ -725,6 +789,14 @@ llvm/IR/Value.def
 /usr/local/opt/llvm/include/llvm/IR/llvm/IR/Value.def
 llvm/IR/Value.def
 /usr/local/opt/llvm/include/llvm/IR/llvm/IR/Value.def
+
+/usr/local/opt/llvm/include/llvm/IR/ValueHandle.h
+llvm/ADT/DenseMapInfo.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/DenseMapInfo.h
+llvm/ADT/PointerIntPair.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/ADT/PointerIntPair.h
+llvm/IR/Value.h
+/usr/local/opt/llvm/include/llvm/IR/llvm/IR/Value.h
 
 /usr/local/opt/llvm/include/llvm/InitializePasses.h
 
