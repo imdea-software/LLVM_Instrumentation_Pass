@@ -20,7 +20,7 @@ Instrument it, use `-instrument functionname` for each function to instrument:
 
     opt -load ../build/InstrumentFunctions/libInstrumentFunctions.so -instrument_function_calls buffer.bc -instrument process > instrumented_buffer.bc
 
-Generate Logger archive:
+Generate Logger object file:
 
     clang -c -o logger.o logger.c
 

@@ -40,8 +40,8 @@ void log_variable_change(const char* variable, int value) {
     zlog_info(variable_values_cat, "%s %d", variable, value);
 }
 
-void log_function_call(const char* file, const char* function) {
+void log_function_call(const char* function) {
     initialized || init();
 
-    zlog_info(function_calls_cat, "%s:%s", file, function);
+    zlog_info(function_calls_cat, "%s", function);
 }
