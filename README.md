@@ -2,6 +2,7 @@
 
 ## Build Pass
 
+    mkdir build
     cd build/
     cmake ../
     cmake --build .
@@ -20,15 +21,11 @@ Instrument it, use `-instrument functionname` for each function to instrument:
 
     opt -load ../build/InstrumentFunctions/libInstrumentFunctions.so -instrument_function_calls buffer.bc -instrument process > instrumented_buffer.bc
 
-Generate Logger object file:
-
-    clang -c -o logger.o logger.c
-
 Link it together
 
-    clang++ instrumented_buffer.bc -o instrumented_buffer -lzlog -lpthread \
-    -L/usr/local/lib -L. -llogger.o
+    clang++ instrumented_buffer.bc -o buffer -lzlog -lpthread \
+    -L/usr/local/lib -L../build/InstrumentFunctions -llogger
 
 Run it:
 
-    ./instrumented_buffer
+    ./buffer
