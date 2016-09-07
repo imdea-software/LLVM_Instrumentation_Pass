@@ -14,7 +14,7 @@ void add(int input) {
 int main() {
     for(int i = 0; i < 100000000; i++) {
         int result = inc(i);
-        if(result % 100 == 0) {
+        if(result % 100000 == 0) {
             add(result);
         }
     }
